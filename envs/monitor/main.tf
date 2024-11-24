@@ -1,4 +1,4 @@
-module "intern_vm" {
+module "proxmox_vm" {
   source      = "../../modules/proxmox_vm"
   hostname   = var.hostname
   username    = var.username

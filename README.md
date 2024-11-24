@@ -55,6 +55,10 @@ $ make create-env ENV_NAME=dev
 - storage : VMのストレージ名
 - bride : VMに割り当てるネットワークブリッジ
 
+## Terraform環境の適用方法
+
+- [Terraform環境の適用方法](./envs/example/README.md)
+
 # 参考
 
 - [Proxmox VEとTerraformでインターン生に仮想マシンを払い出す話](https://qiita.com/ymbk990/items/bd3973d2b858eb86e334)
