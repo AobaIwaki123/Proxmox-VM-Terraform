@@ -1,5 +1,6 @@
 module "intern_vm" {
   source      = "../../modules/proxmox_vm"
+  hostname   = var.hostname
   username    = var.username
   public_key  = var.public_key
   cores       = var.cores

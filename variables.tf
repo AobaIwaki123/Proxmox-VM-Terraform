@@ -1,3 +1,4 @@
+variable "hostname" {}
 variable "username" {}
 variable "public_key" {}
 variable "cores" {}

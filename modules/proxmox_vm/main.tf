@@ -1,5 +1,5 @@
 resource "proxmox_vm_qemu" "vm" {
-  name       = "${var.username}-${var.ip_address}"
+  name       = "${var.hostname}"
   target_node = var.target_node
   clone       = var.template
   os_type     = "cloud-init"
@@ -8,13 +8,26 @@ resource "proxmox_vm_qemu" "vm" {
   cores   = var.cores
   memory  = var.memory
 
-  disk {
-    storage = var.storage
-    type    = "virtio"
-    size    = "${var.disk_size}G"
+  disks {
+    ide {
+      ide2 {
+        cloudinit {
+          storage = var.storage
+        }
+      }
+    }
+    virtio {
+      virtio0 {
+        disk {
+          size = "${var.disk_size}G"
+          storage = var.storage
+        }
+      }
+    }
   }
   
   network {
+    id = 0
     model    = "virtio"
     bridge   = var.bridge
     firewall = false

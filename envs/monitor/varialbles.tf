@@ -1,3 +1,8 @@
+variable "hostname" {
+  description = "The hostname for the VM"
+  type        = string
+}
+
 variable "username" {
   description = "The username for the VM"
   type        = string
