@@ -1,0 +1,11 @@
+variable "username" {}
+variable "public_key" {}
+variable "cores" {}
+variable "memory" {}
+variable "disk_size" {}
+variable "ip_address" {}
+variable "gateway" {}
+variable "target_node" {}
+variable "template" {}
+variable "storage" {}
+variable "bridge" {}
