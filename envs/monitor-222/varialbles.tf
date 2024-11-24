@@ -57,3 +57,8 @@ variable "bridge" {
   description = "The network bridge for the VM"
   type        = string
 }
+
+variable "vmid" {
+  description = "The VM ID"
+  type        = number
+}

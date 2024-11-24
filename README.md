@@ -54,6 +54,7 @@ $ make create-env ENV_NAME=dev
 - template : VMのテンプレート名
 - storage : VMのストレージ名
 - bride : VMに割り当てるネットワークブリッジ
+- vmid : VMのID
 
 ## Terraform環境の適用方法
 
