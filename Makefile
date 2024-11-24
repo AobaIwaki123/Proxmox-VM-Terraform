@@ -4,6 +4,9 @@ init:
 	@apt update
 	@apt install -y unzip
 
+clean-envs:
+	@find envs/* -mindepth 1 -maxdepth 1 -not -name "example" -exec rm -rf {} +
+	
 create-env:
 ifeq ($(ENV_NAME), default_env)
 	@echo "Error: ENV_NAME is not set. Please specify a ENV_NAME">&2

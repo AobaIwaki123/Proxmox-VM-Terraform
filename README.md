@@ -49,6 +49,14 @@ $ qm template 9200
 
 ## 目的毎にTerraformの設定ファイル(env)を作成する
 
+- 初めてこのリポジトリを使う場合は、既存のenvを削除する
+
+```sh
+$ make clean-env
+```
+
+- 以下のコマンドでenvを作成する
+
 ```bash
 $ make create-env ENV_NAME=dev
 ```
