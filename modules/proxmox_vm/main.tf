@@ -9,14 +9,14 @@ resource "proxmox_vm_qemu" "vm" {
   memory  = var.memory
 
   disks {
-    ide {
+    ide { # CloudInitの設定を書き込むためのディスク
       ide2 {
         cloudinit {
           storage = var.storage
         }
       }
     }
-    virtio {
+    virtio { # データ用のディスク
       virtio0 {
         disk {
           size = "${var.disk_size}G"
