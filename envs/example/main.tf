@@ -12,4 +12,5 @@ module "proxmox_vm" {
   template    = var.template
   storage     = var.storage
   bridge      = var.bridge
+  vmid        = var.vmid
 }
