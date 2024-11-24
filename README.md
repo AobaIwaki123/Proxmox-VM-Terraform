@@ -30,7 +30,8 @@ $ make copy-provider
 ## VMテンプレートの作成
 
 以下のコマンドをproxmoxのノード上で実行する
-スクリプトは[こちら](https://qiita.com/ymbk990/items/bd3973d2b858eb86e334)を参考にしました。
+スクリプトは[こちら](https://qiita.com/ymbk990/items/bd3973d2b858eb86e334)を参考にしました。  
+コピペ用は[こちら](./scripts/create-vm-template.sh)。
 
 ```bash
 $ wget https://cloud-images.ubuntu.com/oracular/current/oracular-server-cloudimg-amd64.img -O ubuntu-24.10-server-cloudimg-amd64.img
