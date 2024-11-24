@@ -14,6 +14,19 @@ Proxmox上にTerraformを用いてVMを作成するための設定ファイル�
 
 # Gettig Started
 
+## Terraformのインストール
+
+```sh
+$ sudo make init
+$ make install-tfenv
+```
+
+## Provider情報のコピー
+
+```sh
+$ make copy-provider
+```
+
 ## VMテンプレートの作成
 
 以下のコマンドをproxmoxのノード上で実行する
