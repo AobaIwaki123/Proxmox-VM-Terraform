@@ -52,14 +52,14 @@ $ qm template 9200
 - 初めてこのリポジトリを使う場合は、既存のenvを削除する
 
 ```sh
-$ make clean-vm-env # VM用
-$ make clean-lxc-lxc # LXC(コンテナ)用
+$ make clean-env # VM用
 ```
 
 - 以下のコマンドでenvを作成する
 
 ```bash
-$ make create-env ENV_NAME=dev
+$ make create-vm-env ENV_NAME=dev # VM用
+$ make create-lxc-env ENV_NAME=dev # LXC(コンテナ)用
 ```
 
 `envs/dev/terraform.tfvars`を適宜編集する
