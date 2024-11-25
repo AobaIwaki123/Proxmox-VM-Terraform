@@ -52,7 +52,8 @@ $ qm template 9200
 - 初めてこのリポジトリを使う場合は、既存のenvを削除する
 
 ```sh
-$ make clean-env
+$ make clean-vm-env # VM用
+$ make clean-lxc-lxc # LXC(コンテナ)用
 ```
 
 - 以下のコマンドでenvを作成する
