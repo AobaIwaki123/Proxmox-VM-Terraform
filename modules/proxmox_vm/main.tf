@@ -1,5 +1,5 @@
 resource "proxmox_vm_qemu" "vm" {
-  name       = "${var.hostname}"
+  name       = var.hostname
   target_node = var.target_node
   clone       = var.template
   os_type     = "cloud-init"

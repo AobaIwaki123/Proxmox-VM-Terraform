@@ -52,35 +52,21 @@ $ qm template 9200
 - 初めてこのリポジトリを使う場合は、既存のenvを削除する
 
 ```sh
-$ make clean-env
+$ make clean-env # VM用
 ```
 
 - 以下のコマンドでenvを作成する
 
 ```bash
-$ make create-env ENV_NAME=dev
+$ make create-vm-env ENV_NAME=dev # VM用
+$ make create-lxc-env ENV_NAME=dev # LXC(コンテナ)用
 ```
 
 `envs/dev/terraform.tfvars`を適宜編集する
-以下にざっくりした説明
+詳しい説明は、それぞれの雛形のREADMEを参照
 
-- hostname : VMのホスト名
-- username : VMにログインするユーザ名
-- public_key : VMにログインするための公開鍵
-- cores : CPUのコア数
-- memory : メモリのサイズ (MB)
-- disk_size : ディスクのサイズ (GB)
-- ip_address : VMに割り当てるIPアドレス
-- gateway : VMに割り当てるゲートウェイ
-- target_node : Proxmoxのノード名
-- template : VMのテンプレート名
-- storage : VMのストレージ名
-- bride : VMに割り当てるネットワークブリッジ
-- vmid : VMのID
-
-## Terraform環境の適用方法
-
-- [Terraform環境の適用方法](./envs/example/README.md)
+- [Terraform環境の適用方法(VM)](./envs/example-vm/README.md)
+- [Terraform環境の適用方法(LXC)](./envs/example-lxc/README.md)
 
 # 参考
 
