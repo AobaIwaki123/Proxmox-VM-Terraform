@@ -12,14 +12,14 @@ ifeq ($(ENV_NAME), default_env)
 	@echo "Error: ENV_NAME is not set. Please specify a ENV_NAME">&2
 	@exit 1
 endif
-	cp -r envs/vm-example envs/$(ENV_NAME)
+	cp -r envs/example-vm envs/$(ENV_NAME)
 
 create-lxc-env:
 ifeq ($(ENV_NAME), default_env)
 	@echo "Error: ENV_NAME is not set. Please specify a ENV_NAME">&2
 	@exit 1
 endif
-	cp -r envs/lxc-example envs/$(ENV_NAME)
+	cp -r envs/example-lxc envs/$(ENV_NAME)
 
 copy-provider:
 	@cp modules/proxmox_vm/provider.tf.example modules/proxmox_vm/provider.tf
