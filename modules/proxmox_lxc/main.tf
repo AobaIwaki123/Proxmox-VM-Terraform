@@ -1,11 +1,14 @@
 resource "proxmox_lxc" "basic" {
+  features {
+      nesting = true
+  }
+  
   target_node  = "pve02"
   hostname     = "lxc-basic"
-  password     = "lxc_secret"
   unprivileged = true
   ostemplate   = "local:vztmpl/ubuntu-24.10-standard_24.10-1_amd64.tar.zst"
   
-  vmid = 224
+  vmid = 240
   swap = 512
   start = true
   ssh_public_keys = <<-EOT
@@ -18,11 +21,10 @@ resource "proxmox_lxc" "basic" {
     size    = "8G"
   }
 
-  network {
-    name   = "eth0"
-    bridge = "vmbr0"
-    ip     = "192.168.11.224/24"
-    gw    = "192.168.11.1"
-    firewall = true
-  }
+    network {
+        name = "eth0"
+        bridge = "vmbr0"
+        ip = "192.168.11.240/24"
+        ip6 = "dhcp"
+    }
 }
