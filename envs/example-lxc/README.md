@@ -25,3 +25,18 @@ $ make tf-destroy
 ```sh
 $ make tf-reset
 ```
+
+## 指定できるパラメータ
+
+- hostname : VMのホスト名
+- public_key : VMにログインするための公開鍵
+- cores : CPUのコア数
+- memory : メモリのサイズ (MB)
+- disk_size : ディスクのサイズ (GB)
+- ip_address : VMに割り当てるIPアドレス
+- gateway : VMに割り当てるゲートウェイ
+- target_node : Proxmoxのノード名
+- template : LXCのテンプレート名
+- storage : VMのストレージ名
+- bride : VMに割り当てるネットワークブリッジ
+- vmid : VMのID
