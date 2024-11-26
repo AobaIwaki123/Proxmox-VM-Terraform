@@ -1,6 +1,6 @@
-# Create Proxmox VM with Terraform
+# Create Proxmox VM/LXC with Terraform
 
-Proxmox上にTerraformを用いてVMを作成するための設定ファイル群。  
+Proxmox上にTerraformを用いてVMまたはLXCを作成するための設定ファイル群。  
 `proxmox provider`の`2.11`系はProxmox VEのバージョンアップに対応しておらず、`3.0.1`系は`Breaking Change`が入り、知見が少なかったため手探りで作成した。
 一応、`terraform apply`でしばらく待てば`SSH`ができるところまでは動作確認が取れた。
 
