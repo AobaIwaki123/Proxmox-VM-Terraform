@@ -1,3 +1,5 @@
+tf-clean-init: tf-clean tf-init
+
 tf-clean:
 	rm -rf .terraform
 	rm .terraform.lock.hcl
