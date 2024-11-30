@@ -11,7 +11,7 @@ Proxmox上にTerraformを用いてVMまたはLXCを作成するための設定�
 - tfenv: 3.0.0
 - Proxmox: 8.3.0
 - proxmox provider: 3.0.1-rc5
--   https://github.com/Telmate/terraform-provider-proxmox.git
+  - https://github.com/Telmate/terraform-provider-proxmox.git
 
 # Gettig Started
 
