@@ -10,9 +10,10 @@ Proxmox上にTerraformを用いてVMまたはLXCを作成するための設定�
 - Terraform: v1.9.8
 - tfenv: 3.0.0
 - Proxmox: 8.3.0
-- proxmox provider: 3.0.1-rc5
-  - https://github.com/Telmate/terraform-provider-proxmox.git
-
+- [proxmox provider](https://github.com/Telmate/terraform-provider-proxmox): 3.0.1-rc6
+  - LXCに関しては、`rc5`, `rc6`において[こちら](https://github.com/Telmate/terraform-provider-proxmox/issues/1172)のISSUEが存在するため、`rc4`を使用している
+  - https://registry.terraform.io/providers/Telmate/proxmox/latest/docs
+ 
 # Gettig Started
 
 ## Terraformのインストール
