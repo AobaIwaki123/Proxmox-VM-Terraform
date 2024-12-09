@@ -6,7 +6,7 @@ resource "proxmox_lxc" "basic" {
   vmid = var.vmid
   target_node  = var.target_node
   hostname     = var.hostname
-  ssh_public_keys = var.public_key
+  ssh_public_keys = join("\n", var.public_key)
 
   ostemplate   = "local:vztmpl/${var.template}.tar.zst"
 
