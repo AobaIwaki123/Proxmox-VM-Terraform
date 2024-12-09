@@ -5,7 +5,7 @@ variable "hostname" {
 
 variable "public_key" {
   description = "The public SSH key for authentication"
-  type        = string
+  type        = list(string)
 }
 
 variable "cores" {
