@@ -1,8 +1,9 @@
 # Create Proxmox VM/Container with Terraform
 
-Proxmox上にTerraformを用いてVMまたはContainerを作成するための設定ファイル群。  
-`proxmox provider`の`2.11`系はProxmox VEのバージョンアップに対応しておらず、`3.0.1`系は`Breaking Change`が入り、知見が少なかったため手探りで作成した。
-一応、`terraform apply`でしばらく待てば`SSH`ができるところまでは動作確認が取れた。
+自前のProxmox環境にVMやコンテナを立てるためのTerraformフレームワーク。  
+基本的なコマンドは、Taskfileに集約し、基礎となる環境ファイルは`template`ディレクトリに格納している。  
+公式のドキュメントは[こちら](https://registry.terraform.io/providers/Telmate/proxmox/latest/docs/guides/cloud-init%2520getting%2520started)。  
+絶賛`3.0.1`開発中のProxmox Providerのリポジトリは[こちら](https://github.com/Telmate/terraform-provider-proxmox)。
 
 # Version情報
 
@@ -10,13 +11,14 @@ Proxmox上にTerraformを用いてVMまたはContainerを作成するための�
 - Terraform: v1.9.8
 - tfenv: 3.0.0
 - Proxmox: 8.3.0
-- [proxmox provider](https://github.com/Telmate/terraform-provider-proxmox): 3.0.1-rc6
+- proxmox provider: 3.0.1-rc6
   - Containerに関しては、`rc5`, `rc6`において[こちら](https://github.com/Telmate/terraform-provider-proxmox/issues/1172)のISSUEが存在するため、`rc4`を使用している
-  - https://registry.terraform.io/providers/Telmate/proxmox/latest/docs
  
 # Gettig Started
 
 ## Provider情報のコピー
+
+- TOKENをべたがきするようになっているため、流出に注意
 
 ```sh
 $ make copy-provider
@@ -44,5 +46,3 @@ $ task create-container -- CT_NAME
 
 - [Terraformのインストール](./docs/install_terraform.md)
 - [VMテンプレートの作成](./docs/create_vm_template.md)
-- 
-
