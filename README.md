@@ -40,7 +40,7 @@ $ task create-container -- CT_NAME
 ```
 
 `envs/dev/terraform.tfvars`を適宜編集する
-詳しい説明は、それぞれの雛形のREADMEを参照
+詳しい説明は、それぞれのTemplateのREADMEを参照
 
 # Docs
 
