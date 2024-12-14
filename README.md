@@ -21,7 +21,7 @@
 - TOKENをべたがきするようになっているため、流出に注意
 
 ```sh
-$ make copy-provider
+$ task create-provider
 ```
 
 ## 目的毎にTerraformの設定ファイル(env)を作成する

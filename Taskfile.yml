@@ -28,3 +28,9 @@ tasks:
       - cp -r template/container envs/{{.CLI_ARGS}}
     desc: Proxmox ContainerのためのTerraform Templateを作成. 例 `task create-container -- CT_NAME`
     silent: true
+
+  create-provider:
+    cmds:
+      - cp modules/proxmox_vm/provider.tf.example modules/proxmox_vm/provider.tf
+    desc: Terraform Providerの設定ファイルの雛形を作成
+    silent: true
