@@ -21,10 +21,11 @@ tasks:
           exit 1
         fi
       - cp -r template/vm envs/{{.CLI_ARGS}}
+      - echo "envs/{{.CLI_ARGS}} created."
     desc: Proxmox VMのためのTerraform Templateを作成. 例 `task create-vm -- VM_NAME`
     silent: true
 
-  create-container:
+  create-ct:
     cmds:
       - |
         if [ -z "{{.CLI_ARGS}}" ]; then
@@ -32,7 +33,8 @@ tasks:
           exit 1
         fi
       - cp -r template/container envs/{{.CLI_ARGS}}
-    desc: Proxmox ContainerのためのTerraform Templateを作成. 例 `task create-container -- CT_NAME`
+      - echo "envs/{{.CLI_ARGS}} created."
+    desc: Proxmox ContainerのためのTerraform Templateを作成. 例 `task create-ct -- CT_NAME`
     silent: true
 
   create-provider:

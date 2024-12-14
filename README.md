@@ -36,7 +36,7 @@ $ task delete-all-envs
 
 ```bash
 $ task create-vm -- VM_NAME
-$ task create-container -- CT_NAME
+$ task create-ct -- CT_NAME
 ```
 
 `envs/dev/terraform.tfvars`を適宜編集する
