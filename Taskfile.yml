@@ -1,6 +1,12 @@
 version: '3'
 
 tasks:
+  help:
+    cmds:
+      - task --list
+    desc: ヘルプを表示
+    silent: true
+    
   delete-all-envs:
     cmds:
       - rm -rf envs/*

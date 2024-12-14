@@ -5,25 +5,25 @@
 ```sh
 $ pwd # envs/exampleにいることを確認
 ~/terraform/envs/example
-$ make tf-init
+$ task init-tf
 ```
 
 ## 環境の作成
 
 ```sh
-$ make tf-apply
+$ task apply-tf
 ```
 
 ## 環境の削除
 
 ```sh
-$ make tf-destroy
+$ task destroy-tf
 ```
 
 ## 環境のリセット
 
 ```sh
-$ make tf-reset
+$ task clean-tf
 ```
 
 ## 指定できるパラメータ
