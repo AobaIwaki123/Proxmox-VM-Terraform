@@ -1,1 +1,1 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"proxmox_lxc","Source":"../../modules/proxmox_lxc","Dir":"../../modules/proxmox_lxc"}]}
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"proxmox_vm","Source":"../../modules/proxmox_vm","Dir":"../../modules/proxmox_vm"}]}

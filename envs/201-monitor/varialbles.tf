@@ -3,6 +3,11 @@ variable "hostname" {
   type        = string
 }
 
+variable "username" {
+  description = "The username for the VM"
+  type        = string
+}
+
 variable "public_key" {
   description = "The public SSH key for authentication"
   type        = list(string)
