@@ -2,38 +2,33 @@ version: '3'
 
 tasks:
   help:
-    desc: "Show this help message"
+    desc: 利用可能なタスク一覧を表示する
     cmds:
       - task --list
-    desc: 利用可能なタスク一覧を表示する
 
   clean-tf:
-    desc: "Remove all terraform state files"
+    desc: Terraformの状態ファイルを全て削除する
     cmds:
       - rm -rf .terraform
       - rm .terraform.lock.hcl
       - rm terraform.tfstate
       - rm terraform.tfstate.backup
-    desc: Terraformの状態ファイルを全て削除する
     silent: true
 
   init-tf:
-    desc: "Initialize terraform"
+    desc: Terraformを初期化する
     cmds:
       - terraform init
-    desc: Terraformを初期化する
     silent: true
 
   apply-tf:
-    desc: "Apply terraform"
+    desc: Terraformでリソースを作成する
     cmds:
       - terraform apply -var-file terraform.tfvars -auto-approve
-    desc: Terraformでリソースを作成する
     silent: true
 
   destroy-tf:
-    desc: "Destroy terraform"
+    desc: Terraformでリソースを削除する
     cmds:
       - terraform destroy -var-file terraform.tfvars -auto-approve
-    desc: Terraformでリソースを削除する
     silent: true
